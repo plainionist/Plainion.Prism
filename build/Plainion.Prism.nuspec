@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Plainion.Prism</id>
+    <title>Plainion.Prism</title>
+    <version>@build.number@</version>
+    <authors>ronin4net</authors>
+    <owners>ronin4net</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>https://github.com/ronin4net/Plainion/wiki/Plainion.Prism</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides extensions to Prism to simplify development of software engineering tools</description>
+    <releaseNotes>
+      @releaseNotes@
+    </releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <dependencies>
+      <dependency id="Plainion.Core" version="3.0.0.0" />
+      <dependency id="CommonServiceLocator" version="1.2"/>
+      <dependency id="Expression.Blend.Sdk" version="1.0.2"/>
+      <dependency id="Prism.Core" version="6.1.0"/>
+      <dependency id="Prism.Wpf" version="6.1.0"/>
+      <dependency id="Prism.Mef" version="6.1.0"/>
+    </dependencies>
+  </metadata>
+  @files@
+</package>
