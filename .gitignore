@@ -15,5 +15,4 @@
 /packages/Prism.Mef.6.1.0
 /packages/Prism.Wpf.6.1.0
 /packages/NUnit.2.6.4
-/Plainion.Prism.gc.ssmosett
-/Plainion.Prism.gc.seb
+/Plainion*.gc.*

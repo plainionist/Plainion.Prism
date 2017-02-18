@@ -9,7 +9,7 @@
     <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
     <projectUrl>https://github.com/ronin4net/Plainion/wiki/Plainion.Prism</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Provides extensions to Prism to simplify development of software engineering tools</description>
+    <description>Extending Prism for simplicity and completeness</description>
     <releaseNotes>
       @releaseNotes@
     </releaseNotes>
