@@ -39,4 +39,3 @@ Use the reference implementation (Prism.RI.exe) to play around with the extensio
 this library.
 
 ![](doc/Screenshots/RI.png)
-
