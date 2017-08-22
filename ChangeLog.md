@@ -1,3 +1,7 @@
+## 2.1.1 - 2017-08-22   
+
+- nuspec dependencies fixed
+
 ## 2.1.0 - 2017-08-22   
 
 - udpated to Prism 6.3

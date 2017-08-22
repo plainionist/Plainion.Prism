@@ -14,14 +14,7 @@
       @releaseNotes@
     </releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <dependencies>
-      <dependency id="Plainion.Core" version="3.0.0.0" />
-      <dependency id="CommonServiceLocator" version="1.2"/>
-      <dependency id="Expression.Blend.Sdk" version="1.0.2"/>
-      <dependency id="Prism.Core" version="6.1.0"/>
-      <dependency id="Prism.Wpf" version="6.1.0"/>
-      <dependency id="Prism.Mef" version="6.1.0"/>
-    </dependencies>
+    @dependencies@
   </metadata>
   @files@
 </package>
