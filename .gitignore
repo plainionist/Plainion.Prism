@@ -9,7 +9,7 @@
 /build/.fake
 /packages/CommonServiceLocator.*
 /packages/Expression.Blend.Sdk.*
-/packages/Plainion.Core.*
+/packages/Plainion.*
 /packages/Prism.*
 /packages/NUnit.*
 /Plainion*.gc.*

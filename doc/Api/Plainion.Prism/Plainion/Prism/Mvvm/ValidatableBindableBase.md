@@ -15,7 +15,7 @@
 
 ### System.Boolean HasErrors
 
-### Prism.Mvvm.ErrorsContainer`1[[Plainion.Prism.Mvvm.ValidationFailure, Plainion.Prism, Version=2.1.1.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de]] ErrorsContainer
+### Prism.Mvvm.ErrorsContainer`1[[Plainion.Prism.Mvvm.ValidationFailure, Plainion.Prism, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null]] ErrorsContainer
 
 
 ## Events

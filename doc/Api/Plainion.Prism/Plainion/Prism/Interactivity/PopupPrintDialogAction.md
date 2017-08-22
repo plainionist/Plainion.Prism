@@ -18,7 +18,7 @@
 
 ## Properties
 
-### Plainion.Prism.Interactivity.InteractionRequest.IPrintRequestAware PrintSource
+### Plainion.Windows.Mvvm.IPrintRequestAware PrintSource
 
 
 ## Methods

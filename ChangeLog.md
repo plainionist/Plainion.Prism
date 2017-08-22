@@ -1,3 +1,8 @@
+## 3.0.0 - 2017-08-22   
+
+- moved IPrintRequestAware to Plainion.Windows and so created dependency to Plainion.Windows
+- removed signing of the assemblies
+
 ## 2.1.1 - 2017-08-22   
 
 - nuspec dependencies fixed

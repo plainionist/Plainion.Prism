@@ -28,6 +28,9 @@
     <Reference Include="Plainion.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Plainion.Core.3.3.0\lib\NET45\Plainion.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Plainion.Windows, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plainion.Windows.2.2.0\lib\NET45\Plainion.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
@@ -70,7 +73,6 @@
     <Compile Include="Interactivity\InteractionRequest\IAsyncWindowRequestFactory.cs" />
     <Compile Include="Interactivity\InteractionRequest\IDialog.cs" />
     <Compile Include="Interactivity\InteractionRequest\InteractionRequestExtensions.cs" />
-    <Compile Include="Interactivity\InteractionRequest\IPrintRequestAware.cs" />
     <Compile Include="Interactivity\InteractionRequest\OpenFileDialogNotification.cs" />
     <Compile Include="Interactivity\InteractionRequest\SaveFileDialogNotification.cs" />
     <Compile Include="Interactivity\InteractionRequest\SelectFolderDialogNotification.cs" />
@@ -92,7 +94,9 @@
     <Compile Include="Events\ApplicationShutdownEvent.cs" />
     <Compile Include="Regions\StackPanelRegionAdapter.cs" />
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Interactivity\ExitWithoutSaveView.xaml">
