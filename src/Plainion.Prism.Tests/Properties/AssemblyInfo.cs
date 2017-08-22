@@ -5,15 +5,15 @@ using System.Reflection;
 [assembly: AssemblyProductAttribute("Plainion.Prism")]
 [assembly: AssemblyDescriptionAttribute("Plainion.Prism")]
 [assembly: AssemblyCopyrightAttribute("Copyright @ 2017")]
-[assembly: AssemblyVersionAttribute("2.0.0")]
-[assembly: AssemblyFileVersionAttribute("2.0.0")]
+[assembly: AssemblyVersionAttribute("2.1.0")]
+[assembly: AssemblyFileVersionAttribute("2.1.0")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const System.String AssemblyTitle = "Plainion.Prism.Tests";
         internal const System.String AssemblyProduct = "Plainion.Prism";
         internal const System.String AssemblyDescription = "Plainion.Prism";
         internal const System.String AssemblyCopyright = "Copyright @ 2017";
-        internal const System.String AssemblyVersion = "2.0.0";
-        internal const System.String AssemblyFileVersion = "2.0.0";
+        internal const System.String AssemblyVersion = "2.1.0";
+        internal const System.String AssemblyFileVersion = "2.1.0";
     }
 }
