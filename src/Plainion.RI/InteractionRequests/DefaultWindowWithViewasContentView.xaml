@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:pn="http://github.com/ronin4net/plainion"
              xmlns:l="clr-namespace:Plainion.RI.InteractionRequests"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="600">
@@ -17,7 +18,7 @@
     </UserControl.Resources>
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger SourceObject="{Binding ConfirmationRequest, Mode=OneWay}">
-            <prism:PopupWindowAction/>
+            <pn:PopupViewAction IsIndependent="True"/>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 

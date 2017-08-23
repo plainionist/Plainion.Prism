@@ -1,3 +1,8 @@
+## 4.0.0 - 2017-08-23
+
+- PopupViewAction: obsolete APIs removed
+- PopupViewAction: IsIndependentProperty added to allow removal of ownership from popup window
+
 ## 3.1.0 - 2017-08-23
 
 - PopupViewAction: WindowHeight and WindowWith made obsolete

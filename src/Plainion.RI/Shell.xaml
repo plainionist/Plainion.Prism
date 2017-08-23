@@ -12,9 +12,9 @@
         </StatusBar>
 
         <TabControl TabStripPlacement="Left" Margin="3">
-            <TabItem Header="InteractionRequests">
+            <TabItem Header="Interactivity">
                 <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                    <StackPanel Orientation="Vertical" prism:RegionManager.RegionName="{x:Static l:RegionNames.InteractionRequests}"/>
+                    <StackPanel Orientation="Vertical" prism:RegionManager.RegionName="{x:Static l:RegionNames.Interactivity}"/>
                 </ScrollViewer>
             </TabItem>
         </TabControl>

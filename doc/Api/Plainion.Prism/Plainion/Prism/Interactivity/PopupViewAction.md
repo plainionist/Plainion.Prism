@@ -8,13 +8,11 @@
 
 ## Fields
 
-### System.Windows.DependencyProperty WindowWidthProperty
-
-### System.Windows.DependencyProperty WindowHeightProperty
-
-### System.Windows.DependencyProperty ResizeModeProperty
-
 ### System.Windows.DependencyProperty UseNotificationContentAsDataContextProperty
+
+### System.Windows.DependencyProperty IsIndependentProperty
+
+When set the owner of the popup window is NOT set.
 
 
 ## Constructors
@@ -24,13 +22,9 @@
 
 ## Properties
 
-### System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] WindowWidth
-
-### System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] WindowHeight
-
-### System.Windows.ResizeMode ResizeMode
-
 ### System.Boolean UseNotificationContentAsDataContext
+
+### System.Boolean IsIndependent
 
 
 ## Methods
