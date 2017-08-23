@@ -1,3 +1,7 @@
+## 3.1.0 - 2017-08-23
+
+- PopupViewAction: WindowHeight and WindowWith made obsolete
+
 ## 3.0.0 - 2017-08-22   
 
 - moved IPrintRequestAware to Plainion.Windows and so created dependency to Plainion.Windows

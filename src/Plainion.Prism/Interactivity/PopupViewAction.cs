@@ -10,18 +10,22 @@ namespace Plainion.Prism.Interactivity
     [DefaultProperty( "WindowContent" ), ContentProperty( "WindowContent" )]
     public class PopupViewAction : PopupWindowAction
     {
+        [Obsolete("Use WindowStyle instead")]
         public static readonly DependencyProperty WindowWidthProperty = DependencyProperty.Register(
             "WindowWidth", typeof( double? ), typeof( PopupViewAction ), new PropertyMetadata( null ) );
 
+        [Obsolete("Use WindowStyle instead")]
         public double? WindowWidth
         {
             get { return ( double? )GetValue( WindowWidthProperty ); }
             set { SetValue( WindowWidthProperty, value ); }
         }
 
+        [Obsolete("Use WindowStyle instead")]
         public static readonly DependencyProperty WindowHeightProperty = DependencyProperty.Register(
             "WindowHeight", typeof( double? ), typeof( PopupViewAction ), new PropertyMetadata( null ) );
 
+        [Obsolete("Use WindowStyle instead")]
         public double? WindowHeight
         {
             get { return ( double? )GetValue( WindowHeightProperty ); }
@@ -46,6 +50,7 @@ namespace Plainion.Prism.Interactivity
             set { SetValue( UseNotificationContentAsDataContextProperty, value ); }
         }
 
+#pragma warning disable 618
         protected override Window GetWindow( INotification notification )
         {
             var window = base.GetWindow( notification );
@@ -78,7 +83,6 @@ namespace Plainion.Prism.Interactivity
 
             return window;
         }
-
         private void OnSizeToContentChanged( object sender, EventArgs e )
         {
             var window = ( Window )sender;
@@ -96,6 +100,8 @@ namespace Plainion.Prism.Interactivity
                 window.SizeToContent = SizeToContent.Width;
             }
         }
+
+#pragma warning restore 618
 
         private void OnWindowClosed( object sender, EventArgs e )
         {
