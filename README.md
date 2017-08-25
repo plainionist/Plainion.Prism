@@ -33,9 +33,9 @@ Furthermore it provides general helpers to handle dialogs in an MVVM environment
 - StackPanelRegionAdapter is a Prism RegionAdapter which enables Prism to inject views directly 
   into StackPanels
 
-## Prism.RI
+## Plainion.RI
 
-Use the reference implementation (Prism.RI.exe) to play around with the extensions provided by 
+Use the reference implementation (Plainion.RI.exe) to play around with the extensions provided by 
 this library.
 
 ![](doc/Screenshots/RI.png)
