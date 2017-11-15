@@ -1,6 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Markup;
+using System.Windows.Threading;
 using Prism.Interactivity;
 using Prism.Interactivity.InteractionRequest;
 
@@ -9,6 +11,8 @@ namespace Plainion.Prism.Interactivity
     [DefaultProperty( "WindowContent" ), ContentProperty( "WindowContent" )]
     public class PopupViewAction : PopupWindowAction
     {
+        private Window myWindow;
+
         public static readonly DependencyProperty UseNotificationContentAsDataContextProperty = DependencyProperty.Register(
             "UseNotificationContentAsDataContext", typeof( bool ), typeof( PopupViewAction ), new PropertyMetadata( null ) );
 
@@ -32,19 +36,38 @@ namespace Plainion.Prism.Interactivity
 
         protected override Window GetWindow( INotification notification )
         {
-            var window = base.GetWindow( notification );
+            myWindow = base.GetWindow( notification );
 
             if( UseNotificationContentAsDataContext )
             {
-                window.DataContext = notification.Content;
+                myWindow.DataContext = notification.Content;
             }
 
             if (IsIndependent)
             {
-                window.Owner = null;
+                myWindow.Owner = null;
             }
 
-            return window;
+            EventHandler handler = null;
+            handler = (o, e) =>
+                {
+                    myWindow.Closed -= handler;
+                    myWindow = null;
+                };
+            myWindow.Closed += handler;
+
+            return myWindow;
+        }
+
+        protected override void Invoke(object parameter)
+        {
+            // in case it is already open - bring it to front
+            if (myWindow != null)
+            {
+                myWindow.Activate();
+            }
+
+            base.Invoke(parameter);
         }
     }
 }

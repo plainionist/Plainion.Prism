@@ -1,3 +1,7 @@
+## 4.1.0 - 2017-11-15
+
+- PopupViewAction: window gets activated when still open so that it comes to front
+
 ## 4.0.0 - 2017-08-23
 
 - PopupViewAction: obsolete APIs removed
