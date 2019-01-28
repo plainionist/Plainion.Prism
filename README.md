@@ -23,6 +23,8 @@ Furthermore it provides general helpers to handle dialogs in an MVVM environment
 - PopupWindowContentControl: ContentControl implementing IInteractionRequestAware to perfectly fit into
   PopupwindowActions and to easily support view injection via Prism
 
+See also [MVVM pattern and dialogs](doc/MvvmDialogs.md)
+
 ## Plainion.Prism.Mvvm
 
 - ValidatableBindableBase implments INotifyDataErrorInfo and serves as a base class for views
