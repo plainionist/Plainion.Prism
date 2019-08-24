@@ -1,3 +1,7 @@
+## 5.0.0 - 2019-
+
+- Removed unnecessary dependency to Prism.MEF
+
 ## 4.1.0 - 2017-11-15
 
 - PopupViewAction: window gets activated when still open so that it comes to front
