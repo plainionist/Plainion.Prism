@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using Prism.Interactivity.InteractionRequest;
 using Microsoft.Win32;
+using System;
 
 namespace Plainion.Prism.Interactivity.InteractionRequest
 {
     /// <summary>
     /// Notification base class for Microsoft.Win32.FileDialog.
     /// </summary>
+    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class FileDialogNotificationBase : Confirmation
     {
         protected FileDialogNotificationBase()

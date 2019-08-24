@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
@@ -7,6 +6,7 @@ using Prism.Interactivity.InteractionRequest;
 
 namespace Plainion.Prism.Interactivity.InteractionRequest
 {
+    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class AsyncWindowRequest : IAsyncWindowRequest
     {
         private Type myWindowContent;

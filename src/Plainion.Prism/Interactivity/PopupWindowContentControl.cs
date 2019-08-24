@@ -9,6 +9,7 @@ namespace Plainion.Prism.Interactivity
     /// Custom ContentControl which can be used as placeholder in PopupWindowActions WindowContent to define a region.
     /// This control supports IInteractionRequestAware by view/viewmodel of the region content.
     /// </summary>
+    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class PopupWindowContentControl : ContentControl, IInteractionRequestAware
     {
         private Action myFinishInteration;

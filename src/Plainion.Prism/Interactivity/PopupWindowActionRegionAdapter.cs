@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using System;
+using System.Collections.Specialized;
 using System.ComponentModel.Composition;
 using System.Windows;
 using Prism.Interactivity;
@@ -11,6 +12,7 @@ namespace Plainion.Prism.Interactivity
     /// ATTENTION: make sure you configured "KeepAliveDelayedRegionCreationBehavior" as well otherwise sporadically 
     /// your region will not get updated. See API doc of KeepAliveDelayedRegionCreationBehavior for more details.
     /// </summary>
+    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     [Export( typeof( PopupWindowActionRegionAdapter ) )]
     public class PopupWindowActionRegionAdapter : RegionAdapterBase<PopupWindowAction>
     {

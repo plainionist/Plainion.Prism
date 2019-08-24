@@ -2,12 +2,12 @@
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Markup;
-using System.Windows.Threading;
 using Prism.Interactivity;
 using Prism.Interactivity.InteractionRequest;
 
 namespace Plainion.Prism.Interactivity
 {
+    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     [DefaultProperty( "WindowContent" ), ContentProperty( "WindowContent" )]
     public class PopupViewAction : PopupWindowAction
     {
