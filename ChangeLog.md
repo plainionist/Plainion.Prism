@@ -1,6 +1,6 @@
 ## 5.0.0 - 2019-
 
-- Removed unnecessary dependency to Prism.MEF
+  - Removed unnecessary dependency to Prism.MEF
 
 ## 4.1.0 - 2017-11-15
 
