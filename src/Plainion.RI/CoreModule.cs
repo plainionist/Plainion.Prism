@@ -1,6 +1,7 @@
 ﻿using Plainion.RI.InteractionRequests;
 using Plainion.RI.InteractionRequests.Dialogs;
 using Plainion.RI.Logging;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 
@@ -15,7 +16,7 @@ namespace Plainion.RI
             myRegionManager = regionManager;
         }
 
-        public void Initialize()
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewAsContentView));
             myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewModelAsContentView));
@@ -32,6 +33,10 @@ namespace Plainion.RI
             myRegionManager.RegisterViewWithRegion("RegionWithPopupWindowActionExtensionsView", typeof(ComplexDialog));
 
             myRegionManager.RegisterViewWithRegion(RegionNames.StatusBar, typeof(StatusBarLogView));
+        }
+
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
         }
     }
 }

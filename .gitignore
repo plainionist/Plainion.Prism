@@ -13,4 +13,5 @@
 /packages/Prism.*
 /packages/NUnit.*
 /packages/Unity.*
+/packages/System.*
 /Plainion*.gc.*

@@ -1,4 +1,4 @@
-## 5.0.0 - 2019-
+## 5.0.0 - 2019-08-27
 
 - Removed unnecessary dependency to Prism.MEF
 - Convenience events removed (ApplicationReadyEvent, ApplicationShutdownEvent)
@@ -6,6 +6,7 @@
 - Migrated ReferenceImplementation (RI) from MEF to Unity
 - Migrated to .Net 4.7.2
 - Removed MEF support from Plainion.Prism as MEF will no longer be supported with Prism 7
+- Migrated to Prims 7.2 
 
 ## 4.1.0 - 2017-11-15
 

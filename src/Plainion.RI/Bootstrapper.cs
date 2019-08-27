@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Microsoft.Practices.Unity;
 using Plainion.Logging;
 using Plainion.Prism.Interactivity;
 using Plainion.Prism.Regions;
@@ -9,6 +8,9 @@ using Prism.Interactivity;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
+using Unity;
+using Unity.Lifetime;
+using Unity.RegistrationByConvention;
 
 namespace Plainion.RI
 {
