@@ -6,7 +6,7 @@
 - Migrated ReferenceImplementation (RI) from MEF to Unity
 - Migrated to .Net 4.7.2
 - Removed MEF support from Plainion.Prism as MEF will no longer be supported with Prism 7
-- Migrated to Prims 7.2
+- Migrated to Prims 7.2 
 
 ## 4.1.0 - 2017-11-15
 
