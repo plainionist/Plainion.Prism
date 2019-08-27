@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.Windows;
 using Prism.Regions;
 using Prism.Regions.Behaviors;
@@ -13,13 +12,10 @@ namespace Plainion.Prism.Interactivity
     /// RegionManager.UpdatingRegions event which internally uses WeakReferences. This means if GC catched you before 
     /// RegionManager.UpdateRegions() was called your region will never be updated.
     /// </summary>
-    [Export( typeof( DelayedRegionCreationBehavior ) )]
-    [PartCreationPolicy( CreationPolicy.NonShared )]
     public class KeepAliveDelayedRegionCreationBehavior : DelayedRegionCreationBehavior
     {
         private static List<KeepAliveDelayedRegionCreationBehavior> myKeepAlives = new List<KeepAliveDelayedRegionCreationBehavior>();
 
-        [ImportingConstructor]
         public KeepAliveDelayedRegionCreationBehavior( RegionAdapterMappings regionAdapterMappings )
             : base( regionAdapterMappings )
         {

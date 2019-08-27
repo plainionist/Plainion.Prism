@@ -40,7 +40,7 @@ namespace Plainion.RI
 
             Container.RegisterType<StackPanelRegionAdapter, StackPanelRegionAdapter>();
             Container.RegisterType<PopupWindowActionRegionAdapter, PopupWindowActionRegionAdapter>();
-            Container.RegisterType<KeepAliveDelayedRegionCreationBehavior, KeepAliveDelayedRegionCreationBehavior>();
+            Container.RegisterType<KeepAliveDelayedRegionCreationBehavior, KeepAliveDelayedRegionCreationBehavior>(new TransientLifetimeManager());
 
             Container.RegisterTypes(AllClasses.FromLoadedAssemblies());
         }

@@ -3,6 +3,9 @@
 - Removed unnecessary dependency to Prism.MEF
 - Convenience events removed (ApplicationReadyEvent, ApplicationShutdownEvent)
 - Marked all InteractRequest related classes as obsolete as Prism 7 marks those as obsolete as well
+- Migrated ReferenceImplementation (RI) from MEF to Unity
+- Migrated to .Net 4.7.2
+- Removed MEF support from Plainion.Prism as MEF will no longer be supported with Prism 7
 
 ## 4.1.0 - 2017-11-15
 
