@@ -8,9 +8,6 @@
     <RootNamespace>Plainion.Prism</RootNamespace>
     <AssemblyName>Plainion.Prism</AssemblyName>
     <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>a6f2e0e6</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>$(OutputPath)\Plainion.Prism.xml</DocumentationFile>
