@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.Composition;
-using Plainion.Logging;
+﻿using Plainion.Logging;
 using Prism.Mvvm;
 
 namespace Plainion.RI.Logging
 {
-    [Export( typeof( StatusBarLogViewModel ) )]
-    [Export( typeof( ILoggingSink ) )]
     class StatusBarLogViewModel : BindableBase, ILoggingSink
     {
         private CustomLogEntry myLastLog;

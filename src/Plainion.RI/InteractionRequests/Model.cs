@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.Composition;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     public class Model : BindableBase
     {
         private string myJustMySampleState;

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Prism.Commands;
@@ -8,7 +7,6 @@ using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     class DefaultWindowWithViewAsContentViewModel : BindableBase
     {
         private string myResponse;

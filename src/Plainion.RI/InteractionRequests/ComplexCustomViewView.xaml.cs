@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
-    public partial class ComplexCustomViewView : UserControl
+    partial class ComplexCustomViewView : UserControl
     {
-        [ImportingConstructor]
-        internal ComplexCustomViewView( ComplexCustomViewViewModel viewModel )
+        public ComplexCustomViewView( ComplexCustomViewViewModel viewModel )
         {
             InitializeComponent();
 

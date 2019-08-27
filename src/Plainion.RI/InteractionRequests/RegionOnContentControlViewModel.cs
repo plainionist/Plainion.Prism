@@ -1,15 +1,12 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     class RegionOnContentControlViewModel : BindableBase
     {
-        [ImportingConstructor]
         public RegionOnContentControlViewModel(Model model)
         {
             Model = model;

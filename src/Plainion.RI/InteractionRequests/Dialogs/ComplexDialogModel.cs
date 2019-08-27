@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Composition;
 using System.Windows.Input;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
@@ -7,7 +6,6 @@ using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests.Dialogs
 {
-    [Export, PartCreationPolicy( CreationPolicy.NonShared )]
     public class ComplexDialogModel : BindableBase, IInteractionRequestAware
     {
         private Model myModel;
@@ -16,7 +14,6 @@ namespace Plainion.RI.InteractionRequests.Dialogs
         /// Usually we can assume that for complex UI we have a complex ViewModel with dependencies.
         /// Ideally we let MEF create it in order to resolve dependencies automatically.
         /// </summary>
-        [ImportingConstructor]
         public ComplexDialogModel( Model model )
         {
             myModel = model;

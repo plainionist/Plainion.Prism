@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
-    public partial class RegionOnPopupWindowActionView : UserControl
+    partial class RegionOnPopupWindowActionView : UserControl
     {
-        [ImportingConstructor]
-        internal RegionOnPopupWindowActionView( RegionOnPopupWindowActionViewModel viewModel )
+        public RegionOnPopupWindowActionView( RegionOnPopupWindowActionViewModel viewModel )
         {
             InitializeComponent();
 

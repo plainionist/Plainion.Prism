@@ -1,15 +1,12 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     class RegionWithPopupWindowActionExtensionsViewModel : BindableBase
     {
-        [ImportingConstructor]
         public RegionWithPopupWindowActionExtensionsViewModel( Model model )
         {
             Model = model;

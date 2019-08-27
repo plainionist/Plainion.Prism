@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
@@ -7,10 +6,8 @@ using Prism.Regions;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     class RegionOnPopupWindowActionViewModel : BindableBase
     {
-        [ImportingConstructor]
         public RegionOnPopupWindowActionViewModel( Model model )
         {
             Model = model;

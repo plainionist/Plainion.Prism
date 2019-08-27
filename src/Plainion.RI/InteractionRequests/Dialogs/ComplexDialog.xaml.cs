@@ -1,10 +1,8 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Plainion.RI.InteractionRequests.Dialogs
 {
-    [Export, PartCreationPolicy(CreationPolicy.NonShared)]
-    public partial class ComplexDialog : UserControl
+    partial class ComplexDialog : UserControl
     {
         public ComplexDialog()
         {
@@ -17,8 +15,7 @@ namespace Plainion.RI.InteractionRequests.Dialogs
         /// <summary>
         /// Usually of course we would have only one constructor but in order to keep the sample small ...
         /// </summary>
-        [ImportingConstructor]
-        internal ComplexDialog(ComplexDialogModel viewModel)
+        public ComplexDialog(ComplexDialogModel viewModel)
         {
             InitializeComponent();
 

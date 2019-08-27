@@ -1,17 +1,14 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using Plainion.Logging;
 
 namespace Plainion.RI
 {
-    [Export]
-    public partial class Shell : Window
+    partial class Shell : Window
     {
         private static readonly ILogger myLogger = LoggerFactory.GetLogger( typeof( ShellViewModel ) );
 
-        [ImportingConstructor]
-        internal Shell( ShellViewModel viewModel )
+        public Shell( ShellViewModel viewModel )
         {
             InitializeComponent();
 

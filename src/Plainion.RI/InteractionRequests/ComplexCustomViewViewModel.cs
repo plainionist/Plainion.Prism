@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Plainion.RI.InteractionRequests.Dialogs;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
@@ -7,10 +6,8 @@ using Prism.Mvvm;
 
 namespace Plainion.RI.InteractionRequests
 {
-    [Export]
     class ComplexCustomViewViewModel : BindableBase
     {
-        [ImportingConstructor]
         public ComplexCustomViewViewModel( Model model )
         {
             Model = model;
