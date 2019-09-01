@@ -7,6 +7,7 @@ using Plainion.RI.Logging;
 using Prism.Interactivity;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Regions.Behaviors;
 using Prism.Unity;
 using Unity;
 using Unity.Lifetime;
@@ -42,7 +43,7 @@ namespace Plainion.RI
 
             Container.RegisterType<StackPanelRegionAdapter, StackPanelRegionAdapter>();
             Container.RegisterType<PopupWindowActionRegionAdapter, PopupWindowActionRegionAdapter>();
-            Container.RegisterType<KeepAliveDelayedRegionCreationBehavior, KeepAliveDelayedRegionCreationBehavior>(new TransientLifetimeManager());
+            Container.RegisterType<DelayedRegionCreationBehavior, KeepAliveDelayedRegionCreationBehavior>(new TransientLifetimeManager());
 
             Container.RegisterTypes(AllClasses.FromLoadedAssemblies());
         }
