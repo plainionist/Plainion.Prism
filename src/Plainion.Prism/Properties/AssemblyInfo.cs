@@ -5,7 +5,7 @@ using System.Reflection;
 [assembly: AssemblyTitle("Plainion.Prism")]
 [assembly: AssemblyProduct("Plainion.Prism")]
 [assembly: AssemblyDescription("Plainion.Prism")]
-[assembly: AssemblyCopyright("Copyright @ 2019")]
+[assembly: AssemblyCopyright("Copyright @ 2020")]
 [assembly: AssemblyVersion("5.0.0")]
 [assembly: AssemblyFileVersion("5.0.0")]
 namespace System {
@@ -13,7 +13,7 @@ namespace System {
         internal const System.String AssemblyTitle = "Plainion.Prism";
         internal const System.String AssemblyProduct = "Plainion.Prism";
         internal const System.String AssemblyDescription = "Plainion.Prism";
-        internal const System.String AssemblyCopyright = "Copyright @ 2019";
+        internal const System.String AssemblyCopyright = "Copyright @ 2020";
         internal const System.String AssemblyVersion = "5.0.0";
         internal const System.String AssemblyFileVersion = "5.0.0";
     }
