@@ -9,34 +9,28 @@ namespace Plainion.RI
 {
     class CoreModule : IModule
     {
-        private IRegionManager myRegionManager;
-
-        public CoreModule(IRegionManager regionManager)
-        {
-            myRegionManager = regionManager;
-        }
-
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewAsContentView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewModelAsContentView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(CustomNotificationView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(ComplexCustomViewView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnContentControlView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnPopupWindowActionView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnPopupWindowContentControlView));
-            myRegionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionWithPopupWindowActionExtensionsView));
-
-            myRegionManager.RegisterViewWithRegion("RegionOnContentControlView", typeof(ComplexDialog));
-            myRegionManager.RegisterViewWithRegion("RegionOnPopupWindowActionView", typeof(ComplexDialog));
-            myRegionManager.RegisterViewWithRegion("RegionOnPopupWindowContentControlView", typeof(ComplexDialog));
-            myRegionManager.RegisterViewWithRegion("RegionWithPopupWindowActionExtensionsView", typeof(ComplexDialog));
-
-            myRegionManager.RegisterViewWithRegion(RegionNames.StatusBar, typeof(StatusBarLogView));
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
+            var regionManager = containerProvider.Resolve<IRegionManager>();
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewAsContentView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(DefaultWindowWithViewModelAsContentView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(CustomNotificationView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(ComplexCustomViewView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnContentControlView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnPopupWindowActionView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionOnPopupWindowContentControlView));
+            regionManager.RegisterViewWithRegion(RegionNames.Interactivity, typeof(RegionWithPopupWindowActionExtensionsView));
+
+            regionManager.RegisterViewWithRegion("RegionOnContentControlView", typeof(ComplexDialog));
+            regionManager.RegisterViewWithRegion("RegionOnPopupWindowActionView", typeof(ComplexDialog));
+            regionManager.RegisterViewWithRegion("RegionOnPopupWindowContentControlView", typeof(ComplexDialog));
+            regionManager.RegisterViewWithRegion("RegionWithPopupWindowActionExtensionsView", typeof(ComplexDialog));
+
+            regionManager.RegisterViewWithRegion(RegionNames.StatusBar, typeof(StatusBarLogView));
         }
     }
 }
