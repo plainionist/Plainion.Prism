@@ -7,13 +7,13 @@
     <authors>ronin4net</authors>
     <owners>ronin4net</owners>
     <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
-    <projectUrl>https://github.com/ronin4net/Plainion/wiki/Plainion.Prism</projectUrl>
+    <projectUrl>https://github.com/plainionist/Plainion.Prism</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extending Prism for simplicity and completeness</description>
     <releaseNotes>
       @releaseNotes@
     </releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2020</copyright>
     @dependencies@
   </metadata>
   @files@

@@ -1,108 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="..\..\build\Plainion.Globals.msbuild" />
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <ProjectGuid>{838852B7-5A0C-4ACB-8436-DB2D581708CB}</ProjectGuid>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <RootNamespace>Plainion.Prism</RootNamespace>
-    <AssemblyName>Plainion.Prism</AssemblyName>
-    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+    <WarningsNotAsErrors>CS0612,CS0618</WarningsNotAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DocumentationFile>$(OutputPath)\Plainion.Prism.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DocumentationFile>$(OutputPath)\Plainion.Prism.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\CommonServiceLocator.2.0.4\lib\net47\CommonServiceLocator.dll</HintPath>
-    </Reference>
-    <Reference Include="Plainion.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plainion.Core.3.5.0\lib\NET45\Plainion.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Plainion.Windows, Version=2.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plainion.Windows.2.11.0\lib\NET45\Plainion.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="Prism, Version=7.2.0.1367, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Core.7.2.0.1367\lib\net45\Prism.dll</HintPath>
-    </Reference>
-    <Reference Include="Prism.Wpf, Version=7.2.0.1367, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Wpf.7.2.0.1367\lib\net45\Prism.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="ReachFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Printing" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Wpf.7.2.0.1367\lib\net45\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <None Remove="Images\Warning.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Interactivity\ExitWithoutSaveView.xaml.cs">
-      <DependentUpon>ExitWithoutSaveView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Interactivity\InteractionRequest\AsyncWindowRequest.cs" />
-    <Compile Include="Interactivity\InteractionRequest\AsyncWindowRequestFactory.cs" />
-    <Compile Include="Interactivity\InteractionRequest\Dialog.cs" />
-    <Compile Include="Interactivity\InteractionRequest\ExitWithoutSaveNotification.cs" />
-    <Compile Include="Interactivity\InteractionRequest\FileDialogNotificationBase.cs" />
-    <Compile Include="Interactivity\InteractionRequest\IAsyncWindowRequest.cs" />
-    <Compile Include="Interactivity\InteractionRequest\IAsyncWindowRequestFactory.cs" />
-    <Compile Include="Interactivity\InteractionRequest\IDialog.cs" />
-    <Compile Include="Interactivity\InteractionRequest\InteractionRequestExtensions.cs" />
-    <Compile Include="Interactivity\InteractionRequest\OpenFileDialogNotification.cs" />
-    <Compile Include="Interactivity\InteractionRequest\SaveFileDialogNotification.cs" />
-    <Compile Include="Interactivity\InteractionRequest\SelectFolderDialogNotification.cs" />
-    <Compile Include="Interactivity\KeepAliveDelayedRegionCreationBehavior.cs" />
-    <Compile Include="Interactivity\PopupCommonDialogAction.cs" />
-    <Compile Include="Interactivity\PopupPrintDialogAction.cs" />
-    <Compile Include="Interactivity\PopupViewAction.cs" />
-    <Compile Include="Interactivity\PopupWindowActionExtensions.cs" />
-    <Compile Include="Interactivity\PopupWindowActionRegionAdapter.cs" />
-    <Compile Include="Interactivity\PopupWindowContentControl.cs" />
-    <Compile Include="Mvvm\Severity.cs" />
-    <Compile Include="Mvvm\ValidatableBindableBase.cs" />
-    <Compile Include="Mvvm\ValidationFailure.cs" />
-    <Compile Include="Properties\AssemblyDefs.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Regions\StackPanelRegionAdapter.cs" />
-    <None Include="app.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Interactivity\ExitWithoutSaveView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\Templates.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
+
   <ItemGroup>
     <Resource Include="Images\Warning.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
+    <PackageReference Include="Plainion.Core" Version="4.0.1" />
+    <PackageReference Include="Plainion.Windows" Version="3.0.0" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+  </ItemGroup>
+
 </Project>

@@ -11,7 +11,6 @@ using Prism.Regions.Behaviors;
 using Prism.Unity;
 using Unity;
 using Unity.Lifetime;
-using Unity.RegistrationByConvention;
 
 namespace Plainion.RI
 {
@@ -44,8 +43,6 @@ namespace Plainion.RI
             Container.RegisterType<StackPanelRegionAdapter, StackPanelRegionAdapter>();
             Container.RegisterType<PopupWindowActionRegionAdapter, PopupWindowActionRegionAdapter>();
             Container.RegisterType<DelayedRegionCreationBehavior, KeepAliveDelayedRegionCreationBehavior>(new TransientLifetimeManager());
-
-            Container.RegisterTypes(AllClasses.FromLoadedAssemblies());
         }
 
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
