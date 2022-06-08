@@ -1,3 +1,7 @@
+## 7.0.0 - 2022-06-08
+
+- Migrated to .Net 6
+
 ## 6.0.0 - 2020-08-27
 
 - Migrated to .Net Core

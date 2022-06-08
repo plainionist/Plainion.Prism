@@ -1,30 +1,37 @@
 // load dependencies from source folder to allow bootstrapping
-#r "/bin/Plainion.CI/FAKE/FakeLib.dll"
-#load "/bin/Plainion.CI/bits/PlainionCI.fsx"
+#r "/bin/Plainion.CI/Fake.Core.Target.dll"
+#r "/bin/Plainion.CI/Fake.Core.Trace.dll"
+#r "/bin/Plainion.CI/Fake.IO.FileSystem.dll"
+#r "/bin/Plainion.CI/Fake.IO.Zip.dll"
+#r "/bin/Plainion.CI/Plainion.CI.Tasks.dll"
 
-open Fake
-open PlainionCI
+open Fake.Core
+open Fake.IO
+open Fake.IO.FileSystemOperators
+open Fake.IO.Globbing.Operators
+open Plainion.CI
 
-Target "CreatePackage" (fun _ ->
+Target.create "CreatePackage" (fun _ ->
     !! ( outputPath </> "*.*Tests.*" )
+    ++ ( outputPath </> "*.Specs.*" )
     ++ ( outputPath </> "*nunit*" )
     ++ ( outputPath </> "TestResult.xml" )
     ++ ( outputPath </> "Plainion.RI.*" )
     ++ ( outputPath </> "**/*.pdb" )
-    |> DeleteFiles
+    |> File.deleteAll
 
     [
-        ( projectName + ".*", Some "lib/netstandard2.0", None)
+        ( projectName + ".*", Some "lib/net6.0-windows", None)
     ]
     |> PNuGet.Pack (projectRoot </> "build" </> projectName + ".nuspec") (projectRoot </> "pkg")
 )
 
-Target "Deploy" (fun _ ->
-    trace "Nothing to deploy"
+Target.create "Deploy" (fun _ ->
+    Trace.log "Nothing to deploy"
 )
 
-Target "Publish" (fun _ ->
+Target.create "Publish" (fun _ ->
     PNuGet.PublishPackage projectName (projectRoot </> "pkg")
 )
 
-RunTarget()
+Target.runOrDefault ""
