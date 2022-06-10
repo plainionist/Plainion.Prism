@@ -1,3 +1,7 @@
+## 7.0.1 - 2022-06-10
+
+- Reference to System.Windows.Interactivity removed
+
 ## 7.0.0 - 2022-06-08
 
 - Migrated to .Net 6

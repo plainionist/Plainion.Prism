@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Interactivity;
 using Prism.Interactivity.InteractionRequest;
 using Microsoft.Win32;
+using Microsoft.Xaml.Behaviors;
 
 namespace Plainion.Prism.Interactivity
 {

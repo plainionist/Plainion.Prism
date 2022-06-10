@@ -2,7 +2,7 @@
 using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interactivity;
+using Microsoft.Xaml.Behaviors;
 using Plainion.Windows.Mvvm;
 using Prism.Interactivity.InteractionRequest;
 
