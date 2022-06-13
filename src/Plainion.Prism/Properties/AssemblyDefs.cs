@@ -2,10 +2,11 @@
 using System.Runtime.Versioning;
 using System.Windows.Markup;
 
-[assembly: XmlnsPrefix( "http://github.com/ronin4net/plainion", "pn" )]
-[assembly: XmlnsDefinition( "http://github.com/ronin4net/plainion", "Plainion.Prism" )]
-[assembly: XmlnsDefinition( "http://github.com/ronin4net/plainion", "Plainion.Prism.Interactivity" )]
-[assembly: XmlnsDefinition( "http://github.com/ronin4net/plainion", "Plainion.Prism.Mvvm" )]
+[assembly: XmlnsPrefix("http://github.com/ronin4net/plainion", "pn")]
+[assembly: XmlnsDefinition("http://github.com/ronin4net/plainion", "Plainion.Prism")]
+[assembly: XmlnsDefinition("http://github.com/ronin4net/plainion", "Plainion.Prism.Interactivity")]
+[assembly: XmlnsDefinition("http://github.com/ronin4net/plainion", "Plainion.Prism.Interactivity.InteractionRequest")]
+[assembly: XmlnsDefinition("http://github.com/ronin4net/plainion", "Plainion.Prism.Mvvm")]
 
 [assembly: SupportedOSPlatform("windows7.0")]
 

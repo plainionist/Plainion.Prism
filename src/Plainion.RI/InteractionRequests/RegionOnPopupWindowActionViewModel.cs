@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
+using Plainion.Prism.Interactivity.InteractionRequest;
 using Prism.Commands;
-using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
 using Prism.Regions;
 

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using Prism.Interactivity.InteractionRequest;
 using Microsoft.Win32;
 using Microsoft.Xaml.Behaviors;
+using Plainion.Prism.Interactivity.InteractionRequest;
 
 namespace Plainion.Prism.Interactivity
 {
-    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class PopupCommonDialogAction : TriggerAction<FrameworkElement>
     {
         public static readonly DependencyProperty FileDialogTypeProperty =

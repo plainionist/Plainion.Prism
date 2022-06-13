@@ -4,15 +4,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:prism="http://www.codeplex.com/prism"
-             xmlns:l="clr-namespace:Plainion.RI.InteractionRequests"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:pn="http://github.com/ronin4net/plainion"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="600">
     <i:Interaction.Triggers>
-        <prism:InteractionRequestTrigger SourceObject="{Binding ConfirmationRequest, Mode=OneWay}">
-            <prism:PopupWindowAction>
-                <prism:PopupWindowAction.WindowContent>
+        <pn:InteractionRequestTrigger SourceObject="{Binding ConfirmationRequest, Mode=OneWay}">
+            <pn:PopupWindowAction>
+                <pn:PopupWindowAction.WindowContent>
                     <!-- Usually the actual content would be put into separate UserControl/File-->
                     <DockPanel LastChildFill="True">
                         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="3" FlowDirection="RightToLeft">
@@ -25,9 +24,9 @@
                             <TextBlock DockPanel.Dock="Top" Text="{Binding Question}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="25,0,0,0"/>
                         </StackPanel>
                     </DockPanel>
-                </prism:PopupWindowAction.WindowContent>
-            </prism:PopupWindowAction>
-        </prism:InteractionRequestTrigger>
+                </pn:PopupWindowAction.WindowContent>
+            </pn:PopupWindowAction>
+        </pn:InteractionRequestTrigger>
     </i:Interaction.Triggers>
 
     <GroupBox Header="Custom confirmation (custom view, custom notification as ViewModel)" BorderBrush="Black">

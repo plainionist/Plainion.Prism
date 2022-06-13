@@ -1,3 +1,8 @@
+## 8.0.0 - 2022-06-13
+
+- Migrated to Prism 8
+- InteractionRequest "carved-in" from Prism and related obsoletes removed
+
 ## 7.0.1 - 2022-06-10
 
 - Reference to System.Windows.Interactivity removed

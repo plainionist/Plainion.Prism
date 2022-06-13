@@ -1,14 +1,12 @@
-﻿using System;
-using System.Printing;
+﻿using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Xaml.Behaviors;
+using Plainion.Prism.Interactivity.InteractionRequest;
 using Plainion.Windows.Mvvm;
-using Prism.Interactivity.InteractionRequest;
 
 namespace Plainion.Prism.Interactivity
 {
-    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class PopupPrintDialogAction : TriggerAction<FrameworkElement>
     {
         public static readonly DependencyProperty PrintSourceProperty = DependencyProperty.Register(

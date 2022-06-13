@@ -11,7 +11,6 @@ namespace Plainion.Prism.Interactivity
     /// ATTENTION: make sure you configured "KeepAliveDelayedRegionCreationBehavior" as well otherwise sporadically 
     /// your region will not get updated. See API doc of KeepAliveDelayedRegionCreationBehavior for more details.
     /// </summary>
-    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class PopupWindowActionRegionAdapter : RegionAdapterBase<PopupWindowAction>
     {
         public PopupWindowActionRegionAdapter( IRegionBehaviorFactory factory )

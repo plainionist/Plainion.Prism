@@ -2,58 +2,56 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-using Prism.Interactivity.InteractionRequest;
 
 namespace Plainion.Prism.Interactivity.InteractionRequest
 {
-    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public class AsyncWindowRequest : IAsyncWindowRequest
     {
         private Type myWindowContent;
 
-        public AsyncWindowRequest( Type windowContent )
+        public AsyncWindowRequest(Type windowContent)
         {
             myWindowContent = windowContent;
         }
 
-        public Task Raise( INotification notification )
+        public Task Raise(INotification notification)
         {
-            return Tasks.Tasks.StartSTATask( () =>
-                {
-                    var window = new Window();
+            return Tasks.Tasks.StartSTATask(() =>
+               {
+                   var window = new Window();
 
-                    window.Title = notification.Title;
+                   window.Title = notification.Title;
 
-                    var dialog = notification as IDialog;
-                    if( dialog != null )
-                    {
-                        if( dialog.Width.HasValue )
-                        {
-                            window.Width = dialog.Width.Value;
-                        }
+                   var dialog = notification as IDialog;
+                   if (dialog != null)
+                   {
+                       if (dialog.Width.HasValue)
+                       {
+                           window.Width = dialog.Width.Value;
+                       }
 
-                        if( dialog.Height.HasValue )
-                        {
-                            window.Height = dialog.Height.Value;
-                        }
-                    }
+                       if (dialog.Height.HasValue)
+                       {
+                           window.Height = dialog.Height.Value;
+                       }
+                   }
 
-                    window.Content = ( FrameworkElement )Activator.CreateInstance( myWindowContent );
-                    window.DataContext = notification.Content;
+                   window.Content = (FrameworkElement)Activator.CreateInstance(myWindowContent);
+                   window.DataContext = notification.Content;
 
-                    var requestAware = notification.Content as IInteractionRequestAware;
-                    if( requestAware != null )
-                    {
-                        requestAware.Notification = notification;
-                        requestAware.FinishInteraction = () => window.Close();
-                    }
+                   var requestAware = notification.Content as IInteractionRequestAware;
+                   if (requestAware != null)
+                   {
+                       requestAware.Notification = notification;
+                       requestAware.FinishInteraction = () => window.Close();
+                   }
 
-                    window.Closed += ( s, e ) => ( ( Window )s ).Dispatcher.InvokeShutdown();
+                   window.Closed += (s, e) => ((Window)s).Dispatcher.InvokeShutdown();
 
-                    window.Show();
+                   window.Show();
 
-                    Dispatcher.Run();
-                } );
+                   Dispatcher.Run();
+               });
         }
     }
 }

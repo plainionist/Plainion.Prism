@@ -5,7 +5,6 @@ using Prism.Regions;
 
 namespace Plainion.Prism.Interactivity
 {
-    [Obsolete("Prism 7 marked PopupWindowAction as obsolete. Use IDialogService instead")]
     public static class PopupWindowActionExtensions
     {
         public static string GetRegionName( DependencyObject obj )
