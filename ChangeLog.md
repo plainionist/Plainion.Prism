@@ -1,3 +1,8 @@
+## 9.0.0 - 2025-02-15
+
+- Migrated to .Net 8
+- Migrated to Prism 9
+
 ## 8.0.0 - 2022-06-13
 
 - Migrated to Prism 8
