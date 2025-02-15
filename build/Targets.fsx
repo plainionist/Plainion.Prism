@@ -21,7 +21,7 @@ Target.create "CreatePackage" (fun _ ->
     |> File.deleteAll
 
     [
-        ( projectName + ".*", Some "lib/net8.0-windows", None)
+        ( projectName + ".*", Some "lib/net8.0", None)
     ]
     |> PNuGet.Pack (projectRoot </> "build" </> projectName + ".nuspec") (projectRoot </> "pkg")
 )
