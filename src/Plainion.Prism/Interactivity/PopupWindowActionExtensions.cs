@@ -1,7 +1,5 @@
-﻿using System;
-using System.Windows;
-using Prism.Interactivity;
-using Prism.Regions;
+﻿using System.Windows;
+using Prism.Navigation.Regions;
 
 namespace Plainion.Prism.Interactivity
 {

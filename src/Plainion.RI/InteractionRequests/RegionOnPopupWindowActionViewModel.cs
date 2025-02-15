@@ -2,7 +2,7 @@
 using Plainion.Prism.Interactivity.InteractionRequest;
 using Prism.Commands;
 using Prism.Mvvm;
-using Prism.Regions;
+using Prism.Navigation.Regions;
 
 namespace Plainion.RI.InteractionRequests
 {

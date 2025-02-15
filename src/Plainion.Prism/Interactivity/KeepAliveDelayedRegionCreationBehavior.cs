@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using Prism.Regions;
-using Prism.Regions.Behaviors;
+using Prism.Navigation.Regions;
+using Prism.Navigation.Regions.Behaviors;
 
 namespace Plainion.Prism.Interactivity
 {
@@ -16,20 +16,20 @@ namespace Plainion.Prism.Interactivity
     {
         private static List<KeepAliveDelayedRegionCreationBehavior> myKeepAlives = new List<KeepAliveDelayedRegionCreationBehavior>();
 
-        public KeepAliveDelayedRegionCreationBehavior( RegionAdapterMappings regionAdapterMappings )
-            : base( regionAdapterMappings )
+        public KeepAliveDelayedRegionCreationBehavior(RegionAdapterMappings regionAdapterMappings)
+            : base(regionAdapterMappings)
         {
             // add a strong reference to a static list
-            myKeepAlives.Add( this );
-            GC.Collect( 2, GCCollectionMode.Forced );
+            myKeepAlives.Add(this);
+            GC.Collect(2, GCCollectionMode.Forced);
         }
 
-        protected override IRegion CreateRegion( DependencyObject targetElement, string regionName )
+        protected override IRegion CreateRegion(DependencyObject targetElement, string regionName)
         {
             // remove myself because region is now created - job done
-            myKeepAlives.Remove( this );
+            myKeepAlives.Remove(this);
 
-            return base.CreateRegion( targetElement, regionName );
+            return base.CreateRegion(targetElement, regionName);
         }
     }
 }

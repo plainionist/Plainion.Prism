@@ -3,7 +3,7 @@ using Plainion.RI.InteractionRequests.Dialogs;
 using Plainion.RI.Logging;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
+using Prism.Navigation.Regions;
 
 namespace Plainion.RI
 {

@@ -9,8 +9,8 @@ using Plainion.RI;
 using Plainion.RI.Logging;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
-using Prism.Regions.Behaviors;
+using Prism.Navigation.Regions;
+using Prism.Navigation.Regions.Behaviors;
 using Prism.Unity;
 
 namespace PlainionRI
