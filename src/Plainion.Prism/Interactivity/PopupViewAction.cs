@@ -3,23 +3,21 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Markup;
 using Plainion.Prism.Interactivity.InteractionRequest;
-using Plainion.Prism.Interactivity;
-using Prism.Interactivity;
 
 namespace Plainion.Prism.Interactivity
 {
-    [DefaultProperty( "WindowContent" ), ContentProperty( "WindowContent" )]
+    [DefaultProperty("WindowContent"), ContentProperty("WindowContent")]
     public class PopupViewAction : PopupWindowAction
     {
         private Window myWindow;
 
         public static readonly DependencyProperty UseNotificationContentAsDataContextProperty = DependencyProperty.Register(
-            "UseNotificationContentAsDataContext", typeof( bool ), typeof( PopupViewAction ), new PropertyMetadata( null ) );
+            "UseNotificationContentAsDataContext", typeof(bool), typeof(PopupViewAction), new PropertyMetadata(null));
 
         public bool UseNotificationContentAsDataContext
         {
-            get { return ( bool )GetValue( UseNotificationContentAsDataContextProperty ); }
-            set { SetValue( UseNotificationContentAsDataContextProperty, value ); }
+            get { return (bool)GetValue(UseNotificationContentAsDataContextProperty); }
+            set { SetValue(UseNotificationContentAsDataContextProperty, value); }
         }
 
         /// <summary>
@@ -34,11 +32,11 @@ namespace Plainion.Prism.Interactivity
             set { SetValue(IsIndependentProperty, value); }
         }
 
-        protected override Window GetWindow( INotification notification )
+        protected override Window GetWindow(INotification notification)
         {
-            myWindow = base.GetWindow( notification );
+            myWindow = base.GetWindow(notification);
 
-            if( UseNotificationContentAsDataContext )
+            if (UseNotificationContentAsDataContext)
             {
                 myWindow.DataContext = notification.Content;
             }
